@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LHW | Personal Website</title>
+
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --primary: #2563eb;
+      --primary-light: #dbeafe;
+      --border: #e5e7eb;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, #dbeafe 0, transparent 32%),
+        radial-gradient(circle at bottom right, #fce7f3 0, transparent 28%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+
+    .hero {
+      background: rgba(255, 255, 255, 0.86);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 48px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: 44px;
+      line-height: 1.2;
+      margin: 0 0 12px;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .intro {
+      font-size: 17px;
+      margin-bottom: 16px;
+    }
+
+    .highlight {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .section {
+      margin-top: 36px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px 20px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+    }
+
+    .card span {
+      display: block;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .card strong {
+      display: block;
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 42px;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 36px 16px;
+      }
+
+      .hero {
+        padding: 30px 22px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .subtitle {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <section class="hero">
+      <div class="tag">🚗 Intelligent Driving · Autonomous Parking · Trajectory Prediction</div>
+
+      <h1>Hi, I'm LHW 👋</h1>
+
+      <p class="subtitle">
+        Graduate Student in Vehicle Engineering
+      </p>
+
+      <p class="intro">
+        I am a graduate student focusing on
+        <span class="highlight">intelligent driving</span>,
+        <span class="highlight">end-to-end autonomous parking</span>,
+        trajectory prediction, and closed-loop autonomous driving evaluation.
+      </p>
+
+      <p class="intro">
+        My research centers on building robust parking trajectory prediction systems by combining
+        BEV representation learning, planner-prior trajectory refinement, and CARLA-based
+        closed-loop validation.
+      </p>
+
+      <div class="section">
+        <h2>Research Interests ✨</h2>
+
+        <div class="grid">
+          <div class="card">
+            <span>🅿️</span>
+            <strong>End-to-End Autonomous Parking</strong>
+            <p>Learning-based parking systems from perception to trajectory output.</p>
+          </div>
+
+          <div class="card">
+            <span>📍</span>
+            <strong>Trajectory Prediction and Planning</strong>
+            <p>Predicting feasible, smooth, and executable parking trajectories.</p>
+          </div>
+
+          <div class="card">
+            <span>🧭</span>
+            <strong>BEV Representation Learning</strong>
+            <p>Building bird's-eye-view scene representations for driving tasks.</p>
+          </div>
+
+          <div class="card">
+            <span>🛠️</span>
+            <strong>Planner-prior Residual Modeling</strong>
+            <p>Refining traditional planning priors with learning-based residual correction.</p>
+          </div>
+
+          <div class="card">
+            <span>🌍</span>
+            <strong>CARLA Closed-loop Evaluation</strong>
+            <p>Validating autonomous parking policies in simulation environments.</p>
+          </div>
+
+          <div class="card">
+            <span>🤖</span>
+            <strong>Multimodal Learning for AD</strong>
+            <p>Exploring vision, language, and trajectory modeling for autonomous driving.</p>
+          </div>
+
+          <div class="card">
+            <span>🎯</span>
+            <strong>Reinforcement Learning</strong>
+            <p>Studying long-horizon decision-making for closed-loop driving tasks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>研究方向 🚀</h2>
+
+        <div class="grid">
+          <div class="card">
+            <span>🅿️</span>
+            <strong>端到端自动泊车</strong>
+            <p>从感知输入到轨迹输出的一体化自动泊车建模。</p>
+          </div>
+
+          <div class="card">
+            <span>📈</span>
+            <strong>轨迹预测与轨迹规划</strong>
+            <p>面向泊车场景的可执行、安全、平滑轨迹生成。</p>
+          </div>
+
+          <div class="card">
+            <span>🧠</span>
+            <strong>BEV 表征学习</strong>
+            <p>构建适合自动驾驶任务的鸟瞰图场景表达。</p>
+          </div>
+
+          <div class="card">
+            <span>🔧</span>
+            <strong>基于规划先验的残差轨迹建模</strong>
+            <p>在传统规划轨迹基础上学习稳定的残差修正。</p>
+          </div>
+
+          <div class="card">
+            <span>🎮</span>
+            <strong>CARLA 闭环仿真评估</strong>
+            <p>在仿真环境中验证泊车模型的闭环执行能力。</p>
+          </div>
+
+          <div class="card">
+            <span>🤝</span>
+            <strong>面向自动驾驶的多模态学习</strong>
+            <p>探索视觉、语言、轨迹等多模态信息的融合建模。</p>
+          </div>
+
+          <div class="card">
+            <span>🏁</span>
+            <strong>面向长程驾驶任务的强化学习</strong>
+            <p>研究闭环驾驶任务中的长期决策与策略优化。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Built with curiosity, code, and a little bit of parking magic ✨
+      <br />
+      <a href="https://github.com/YOUR_GITHUB_USERNAME">GitHub</a>
+    </footer>
+  </main>
+</body>
+</html>
